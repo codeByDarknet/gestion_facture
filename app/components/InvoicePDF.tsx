@@ -28,6 +28,11 @@ const InvoicePDF: React.FC<FacturePDFProps> = ({ invoice, totals }) => {
     const handleDownloadPdf = async () => {
        const element = factureRef.current;
        try {
+
+
+        if (element === null) {
+            throw new Error("Element is null");
+          }
         
         const canvas = await html2canvas(element, { scale: 3, useCORS: true })
         const imgData = canvas.toDataURL('image/png')
