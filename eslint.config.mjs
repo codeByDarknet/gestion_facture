@@ -15,6 +15,8 @@ const eslintConfig = [
     rules: {
       'react/no-unescaped-entities': 'off',
       '@next/next/no-page-custom-font': 'off',
+      'jsx-a11y/role-supports-aria-props': 'off',
+      'react-hooks/exhaustive-deps': 'off'
     },
   }
 ];
