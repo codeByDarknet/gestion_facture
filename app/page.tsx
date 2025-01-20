@@ -1,9 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Wrapper from "./components/Wrapper";
 import { Layers } from "lucide-react";
-import { use, useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import { useUser } from "@clerk/nextjs";
 import { createEmptyInvoice, getInvoicesByEmail } from "./actions";
 import confeti from "canvas-confetti";
@@ -67,7 +66,7 @@ const handleCreateInvoice = async () => {
 
 useEffect(() => {
   fetchInvoices();
-}, [email]);
+}, [email,fetchInvoices]);
 
 
 
@@ -95,7 +94,7 @@ useEffect(() => {
             {invoices.length > 0 ? (
               invoices.map((invoice, index) => (
                 <div className="" key={index}>
-                    <InvoiceComponent  invoice={invoice}  index={index}/>
+                    <InvoiceComponent  invoice={invoice}/>
                 </div>
               ))
             ) : (

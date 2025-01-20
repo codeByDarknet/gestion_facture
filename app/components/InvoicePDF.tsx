@@ -3,7 +3,7 @@ import confetti from 'canvas-confetti'
 import html2canvas from 'html2canvas-pro'
 import jsPDF from 'jspdf'
 import { ArrowDownFromLine, Layers } from 'lucide-react'
-import React, { use, useRef } from 'react'
+import React, { useRef } from 'react'
 
 interface FacturePDFProps {
     invoice: Invoice
@@ -97,7 +97,7 @@ const InvoicePDF: React.FC<FacturePDFProps> = ({ invoice, totals }) => {
                                 {formatDate(invoice.invoiceDate)}
                             </p>
                             <p className="">
-                                <strong>Date d'echéance </strong>
+                                <strong>Date d&apos;echéance </strong>
                                 {formatDate(invoice.dueDate)}
                             </p>
                         </div>

@@ -1,11 +1,10 @@
 import React from 'react'
 import { Invoice } from '@/type'
-import { CheckCircle, Clock, FileText, Plus, SquareArrowUpRight, XCircle } from 'lucide-react';
+import { CheckCircle, Clock, FileText, SquareArrowUpRight, XCircle } from 'lucide-react';
 import Link from 'next/link';
 
 type InvoiceComponentProps = {
     invoice: Invoice;
-    index: number;
 }
 
 const getStautBadge = (code : number) => {
@@ -56,7 +55,7 @@ const getStautBadge = (code : number) => {
 }
 
 
-const InvoiceComponent : React.FC<InvoiceComponentProps> = ({invoice, index}) => {
+const InvoiceComponent : React.FC<InvoiceComponentProps> = ({invoice}) => {
 
 const calculTotal = () => {
     const totalHT = invoice?.lines?.reduce((acc, line) => {    

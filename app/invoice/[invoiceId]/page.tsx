@@ -13,7 +13,7 @@ import { useRouter } from 'next/navigation';
 import InvoicePDF from '@/app/components/InvoicePDF';
 
 
-const page = ({ params }: { params: Promise<{ invoiceId: string }> }) => {
+const Page = ({ params }: { params: Promise<{ invoiceId: string }> }) => {
 
     const [invoice, setInvoice] = useState<Invoice | null>(null);
     const [initialInvoice, setInitialInvoice] = useState<Invoice | null>(null);
@@ -215,4 +215,4 @@ const page = ({ params }: { params: Promise<{ invoiceId: string }> }) => {
     )
 }
 
-export default page
+export default Page
