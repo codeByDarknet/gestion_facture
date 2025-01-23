@@ -69,7 +69,7 @@ const handleCreateInvoice = async () => {
 
 useEffect(() => {
   fetchInvoices();
-}, [email,fetchInvoices]);
+}, [email]);
 
 
 
